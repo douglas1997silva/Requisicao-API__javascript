@@ -43,12 +43,10 @@ async function buscarVideosApi() {
       li.appendChild(iframe);
       li.appendChild(divDescricao);
 
-      document.getElementById("containerVideos").appendChild(li);
+      containerVideos.appendChild(li);
     });
   } catch (error) {
-    document.getElementById(
-      "containerVideos"
-    ).innerHTML = `<p>Houve um erro ao carregar o vídeo: ${error}</p>`;
+    containerVideos.innerHTML = `<p>Houve um erro ao carregar o vídeo: ${error}</p>`;
   }
 }
 
