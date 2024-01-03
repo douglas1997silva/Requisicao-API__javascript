@@ -30,6 +30,11 @@ async function buscarVideosApi() {
  
  // Chamada da função buscarVideosApi
  buscarVideosApi();
+
+ const barraDePesquisa = document.querySelector('.pesquisar__input');
+ barraDePesquisa.addEventListener('input', filtrarPesquisa);
+
+ 
  function filtrarPesquisa() {
   const videos = document.querySelectorAll('.videos__item');
   const valorFiltro = barraDePesquisa.value.toLowerCase();
