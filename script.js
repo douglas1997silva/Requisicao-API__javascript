@@ -30,4 +30,15 @@ async function buscarVideosApi() {
  
  // Chamada da função buscarVideosApi
  buscarVideosApi();
+ function filtrarPesquisa() {
+  const videos = document.querySelectorAll('.videos__item');
+  const valorFiltro = barraDePesquisa.value.toLowerCase();
+
+  videos.forEach((video) => {
+    const titulo = video.querySelector('.titulo-video').textContent.toLowerCase();
+
+    video.style.display = valorFiltro ? titulo.includes(valorFiltro) ? 'block' : 'none' : 'block';
+  });
+}
+
  
